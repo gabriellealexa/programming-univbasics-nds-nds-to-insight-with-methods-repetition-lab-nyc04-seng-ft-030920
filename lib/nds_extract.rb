@@ -45,10 +45,13 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
   
-while   
-database = source[director_index]  
-grand_total += gross_for_director(database)
-director_index += 1 
+grand_total = 0 
+director_index = 0 
+  
+while director_index < source.length do   
+  database = source[director_index]  
+  grand_total += gross_for_director(database)
+  director_index += 1 
 end   
   
   grand_total
